@@ -8,7 +8,6 @@ namespace Interface2.Entidades {
         public int Numero { get; set; }
         public DateTime Data { get; set; }
         public double ValorTotal { get; set; }
-
         public List<Prestacao> Prestacoes { get; set; }
 
         public Contrato(int numero, DateTime data, double valorTotal) {
@@ -20,7 +19,6 @@ namespace Interface2.Entidades {
 
         public void AddPrestacao(Prestacao prestacao) {
             Prestacoes.Add(prestacao);
-
         }
     }
 }

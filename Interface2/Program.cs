@@ -6,6 +6,7 @@ using System.Globalization;
 namespace Interface2 {
     class Program {
         static void Main(string[] args) {
+
             Console.WriteLine("Entre com os dados do contrato: ");
             Console.Write("Numero: ");
             int numero =int.Parse(Console.ReadLine());

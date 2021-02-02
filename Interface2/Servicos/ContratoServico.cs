@@ -20,7 +20,6 @@ namespace Interface2.Servicos {
                 double quotaTotal = quotaJuros + _pagamentoOnlineServico.TaxaPagamento(quotaJuros);
                 contrato.AddPrestacao(new Prestacao(data, quotaTotal));
             }
-
         }
     }
 }
