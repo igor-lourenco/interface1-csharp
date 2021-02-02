@@ -8,10 +8,7 @@ namespace interface1.Entidades {
 
         public double PagamentoBasico { get; set; }
         public double Taxa { get; set; }
-      
-
-        
-
+     
         public Pagamento(double pagamentoBasico, double taxa) {
             PagamentoBasico = pagamentoBasico;
             Taxa = taxa;

@@ -9,11 +9,12 @@ namespace interface1.Servicos {
         public Double PrecoPorHora { get; private set; }
         public Double PrecoPorDia { get; private set; }
 
-        private BrasilTaxaServico _brasilTaxaServico = new BrasilTaxaServico();
+        private ITaxaServico _taxaServico;
 
-        public AluguelServico(double precoPorHora, double precoPorDia) {
+        public AluguelServico(double precoPorHora, double precoPorDia, ITaxaServico taxaServico) {
             PrecoPorHora = precoPorHora;
             PrecoPorDia = precoPorDia;
+            _taxaServico = taxaServico;
         }
 
         public void ProcessoAluguel(Aluguel aluguel) {
@@ -25,7 +26,7 @@ namespace interface1.Servicos {
             else
                 pagamentoBasico = PrecoPorDia * Math.Ceiling(duracao.TotalDays);
 
-            double taxa = _brasilTaxaServico.Taxa(pagamentoBasico);
+            double taxa = _taxaServico.Taxa(pagamentoBasico);
 
             aluguel.NotaPagamento = new Pagamento(pagamentoBasico, taxa);
         }

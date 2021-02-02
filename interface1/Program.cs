@@ -21,7 +21,7 @@ namespace interface1 {
                 double dia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
                 Aluguel aluguel = new Aluguel(saida, entrada, new Veiculo(modelo));
-                AluguelServico aluguelServico = new AluguelServico(hora, dia);
+                AluguelServico aluguelServico = new AluguelServico(hora, dia, new BrasilTaxaServico());
 
                 aluguelServico.ProcessoAluguel(aluguel);
 
@@ -29,12 +29,6 @@ namespace interface1 {
                 Console.WriteLine("FATURA: ");
                 Console.WriteLine(aluguel.NotaPagamento);
             
-            
-
-            
-
-           
-
         }
     }
 }

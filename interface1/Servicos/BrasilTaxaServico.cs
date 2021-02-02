@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace interface1.Servicos {
-    class BrasilTaxaServico {
+    class BrasilTaxaServico : ITaxaServico {
 
         public double Taxa(double quantia) {
             if (quantia <= 100.0)
